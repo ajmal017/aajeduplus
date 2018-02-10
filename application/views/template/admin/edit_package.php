@@ -42,20 +42,6 @@ $package_data=getPackages($package_id);
                                 </div>
                             </div>
                             <div class="row clearfix">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <label>Package Type</label>
-                                            <select class="form-control" name="package_type" id="package_type">
-                                                <option value="">Select</option>
-                                                <option value="Lumsum" <?php if($package_data['package_type'] == "Lumsum"){ echo "selected"; } ?> >Lumsum</option>
-                                                <option value="SIP" <?php if($package_data['package_type'] == "SIP"){ echo "selected"; } ?>>SIP</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <div class="form-line">

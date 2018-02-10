@@ -17,9 +17,9 @@ class Packages_model extends CI_Model
         return $last_inserted_id;
     }
 
-    function editPackage($package_id,$package_name,$package_amount,$package_type,$package_desc){
+    function editPackage($package_id,$package_name,$package_amount,$package_desc){
         $this->db->trans_start();
-        $array = array('package_amount' => $package_amount,'package_name'=>$package_name,'package_type'=>$package_type,'package_desc'=>$package_desc);
+        $array = array('package_amount' => $package_amount,'package_name'=>$package_name,'package_desc'=>$package_desc);
 		$this->db->where('package_id', $package_id);
 		$res = $this->db->update('package_master', $array);
 		$this->db->trans_complete();

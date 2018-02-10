@@ -38,20 +38,6 @@
                                 </div>
                             </div>
                             <div class="row clearfix">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <label>Package Type</label>
-                                            <select class="form-control" name="package_type" id="package_type">
-                                                <option value="">Select</option>
-                                                <option value="Lumsum">Lumsum</option>
-                                                <option value="SIP">SIP</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <div class="form-line">
@@ -130,7 +116,6 @@
                                         ?>
                                         <tr id="package-id-<?php echo $row['package_id']; ?>">
                                             <td><?= $row['package_name'];?></td>
-                                            <td><?= $row['package_type'];?></td>
                                             <td><?= $row['package_amount'];?></td>
                                             <td>
                                                 <button type="button" class="btn btn-primary waves-effect" onclick="window.open('<?= site_url(); ?>admin_packages/edit/<?php echo $row['package_id']; ?>','_blank')">Edit</button>

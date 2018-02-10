@@ -38,14 +38,13 @@ class Admin_packages extends CI_Controller {
 			$package_name = $this->input->post('package_name');
 			$package_amount = $this->input->post('package_amount');
 			$package_desc = $this->input->post('package_desc');
-			$package_type = $this->input->post('package_type');
 			$filesCount=isset($_FILES['files']['name'])? count($_FILES['files']['name']):0;
 			$downloadable_documents_count=isset($_FILES['downloadable_documents']['name'])? count($_FILES['downloadable_documents']['name']):0;
 
 			$this->form_validation->set_rules('package_name', 'Package Name', 'required');
 			$this->form_validation->set_rules('package_amount', 'Package Amount', 'required|numeric');
 			$this->form_validation->set_rules('package_desc', 'Package Description', 'required');
-			$this->form_validation->set_rules('package_type', 'Package Type', 'required');
+			
 			
 			$this->form_validation->run();
 	        $error_array = $this->form_validation->error_array();
@@ -79,7 +78,7 @@ class Admin_packages extends CI_Controller {
 
 	        if(count($error_array) == 0 )
 	        {
-	        	$last_inserted_id = $this->Adminpackages_model->addPackage($package_name,$package_amount,$package_type,$package_desc);	
+	        	$last_inserted_id = $this->Adminpackages_model->addPackage($package_name,$package_amount,$package_desc);	
 
 	        	$this->load->library('upload');
 			    $config['upload_path'] = FCPATH . 'uploads/packages/';
@@ -175,7 +174,6 @@ class Admin_packages extends CI_Controller {
 			$package_name = $this->input->post('package_name');
 			$package_amount = $this->input->post('package_amount');
 			$package_desc = $this->input->post('package_desc');
-			$package_type = $this->input->post('package_type');
 			
 			$package_image = $this->input->post('package_image');
 			$filesCount=isset($_FILES['files']['name'])? count($_FILES['files']['name']):0;
@@ -185,7 +183,6 @@ class Admin_packages extends CI_Controller {
 			$this->form_validation->set_rules('package_name', 'Package Name', 'required');
 			$this->form_validation->set_rules('package_amount', 'Package Amount', 'required|numeric');
 			$this->form_validation->set_rules('package_desc', 'Package Description', 'required');
-			$this->form_validation->set_rules('package_type', 'Package Type', 'required');
 			
 			$this->form_validation->run();
 	        $error_array = $this->form_validation->error_array();
@@ -219,7 +216,7 @@ class Admin_packages extends CI_Controller {
 
 	        if(count($error_array) == 0 )
 	        {
-	        	$this->Adminpackages_model->editPackage($package_id,$package_name,$package_amount,$package_type,$package_desc);	
+	        	$this->Adminpackages_model->editPackage($package_id,$package_name,$package_amount,$package_desc);	
 	        	$this->load->library('upload');
 		        if($filesCount > 0)
 		        {	
