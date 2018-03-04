@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://aajeduplus.com/';
+$config['base_url'] = 'https://aajeduplus.com/';
 
 /*
 |--------------------------------------------------------------------------
