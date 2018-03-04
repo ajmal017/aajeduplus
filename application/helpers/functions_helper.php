@@ -65,7 +65,10 @@ function send_email($data = array()) {
 	$CI->email->subject($subject);
 	$CI->email->message($html);
 	//echo $html;
-	//$CI->email->send();
+	if($_SERVER['SERVER_NAME'] != 'localhost')
+	{
+		$CI->email->send();	
+	}
 	//print_r($CI->email->print_debugger());
 }
 
@@ -86,9 +89,9 @@ function send_sms($mobileNumber,$message)
     );
     $url="https://control.msg91.com/api/sendhttp.php";    
     $result = 'Mobile Number not valid';
-    if(strlen($mobileNumber) > 5)
+    if(strlen($mobileNumber) > 5 && $_SERVER['SERVER_NAME'] != 'localhost')
     {
-    	//$result = curl_request($url,"POST","MSG 91",$postData);
+    	$result = curl_request($url,"POST","MSG 91",$postData);
     }
    	return $result;
 }
