@@ -28,7 +28,6 @@
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Package Image</th>
-                                        <th>Amount</th>
                                         <th>Purchase Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -38,7 +37,6 @@
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Package Image</th>
-                                        <th>Amount</th>
                                         <th>Purchase Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -50,7 +48,6 @@
                                     <tr>
                                       <td><?= $upl['package_name']; ?></td>
                                       <td><img class="img-responsive thumbnail" ng-src="<?= imagePath($upl['package_image'],'packages',100,100); ?>" /></td>
-                                      <td><?= $upl['package_amount']; ?></td>
                                       <td><?= $upl['purchase_date']; ?></td>
                                       <td><?= $upl['user_package_status']; ?></td>
                                       <td>

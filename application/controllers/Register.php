@@ -27,7 +27,7 @@ class Register extends CI_Controller {
 		$placement = $this->input->get('placement');
 		$data['sponserUsername']=$sponserUsername;
 		$data['placement']=$placement;
-		$this->load->view('frontend/register',$data);
+		$this->load->view('template/register',$data);
 	}
 	
 	public function signUp()
@@ -63,11 +63,11 @@ class Register extends CI_Controller {
 				$error_array['email'] = 'Email ID already exists';
 			}
 
-			$checkMobileNumberExists = checkMobileNumberExists('userdetails',array('mobile' => $mobile));	
+			/*$checkMobileNumberExists = checkMobileNumberExists('userdetails',array('mobile' => $mobile));	
 			if($checkMobileNumberExists == true)
 			{
 				$error_array['mobile'] = 'Mobile Number already exists';
-			}
+			}*/
 			if(count($error_array) == 0 )
 			{
 				$this->load->model('Register_model');
@@ -119,7 +119,7 @@ class Register extends CI_Controller {
 				$template_data['verification_otp'] = $verification_otp;
 
 				$email_data['subject'] = 'New Registration Email Verfication';
-				$email_data['html'] = $this->load->view('frontend/email_templates/new_registration_verification',$template_data,true);;
+				$email_data['html'] = $this->load->view('template/email_templates/login_verification',$template_data,true);;
 				$email_data['to'] = $email;
 
 				send_sms($mobile,$email_data['html']);
@@ -226,7 +226,7 @@ class Register extends CI_Controller {
 				$template_data['verification_otp'] = $verification_otp;
 
 				$email_data['subject'] = 'New Registration Email Verfication';
-				$email_data['html'] = $this->load->view('frontend/email_templates/new_registration_verification',$template_data,true);;
+				$email_data['html'] = $this->load->view('template/email_templates/login_verification',$template_data,true);;
 				$email_data['to'] = $email;
 
 				send_sms($mobile,$email_data['html']);

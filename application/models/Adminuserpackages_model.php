@@ -15,10 +15,15 @@ class Adminuserpackages_model extends CI_Model
         return true;
     }
 
-    function userPackageRequestAction($user_package_id,$status,$userid)
+    function userPackageRequestAction($user_package_id,$userid,$amount,$months)
     {
         $this->db->trans_start();
-        $array = array('status' => $status,'acceptance_date'=> config_item('current_date'));
+        $array = array();
+        $array['status'] = 'accepted';
+        $array['acceptance_date']= config_item('current_date');
+        $array['amount'] = $amount;
+        $array['months'] = $months;
+
         $this->db->where('id', $user_package_id);
         $res = $this->db->update('user_packages', $array);
         

@@ -22,7 +22,6 @@
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Package Image</th>
-                                        <th>Amount</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -30,7 +29,6 @@
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Package Image</th>
-                                        <th>Amount</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>
@@ -45,7 +43,6 @@
                                       <tr id="package-id-<?php echo $row['package_id']; ?>">
                                         <td class="package_name"><?= $row['package_name'];?></td>
                                         <td><img class="img-responsive thumbnail" ng-src="<?= imagePath($row['package_image'],'packages',100,100); ?>"/></td>
-                                        <td><?= $row['package_amount'];?></td>
                                         <td><button type="button" class="btn btn-primary addPackage" ng-click="add_package_modal(<?php echo $row['package_id']; ?>)">BUY</button></td>
                                       </tr>
                                       <?php 

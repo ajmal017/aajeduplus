@@ -23,10 +23,8 @@
                                     <tr>
                                         <th>User Name</th>
                                         <th>Package Name</th>
-                                        <th>Package Amount</th>
                                         <th>Payment Details</th>
                                         <th>Payment Type</th>
-                                        <th>Total Amount</th>
                                         <th>Purchase Date</th>
                                         <th>Controls</th>
                                     </tr>
@@ -35,10 +33,8 @@
                                     <tr>
                                         <th>User Name</th>
                                         <th>Package Name</th>
-                                        <th>Package Amount</th>
                                         <th>Payment Details</th>
                                         <th>Payment Type</th>
-                                        <th>Total Amount</th>
                                         <th>Purchase Date</th>
                                         <th>Controls</th>
                                     </tr>
@@ -51,13 +47,11 @@
                                         <tr id="user-package-id-<?php echo $row['user_package_id']; ?>">
                                             <td><?= $row['username'];?></td>
                                             <td><?= $row['package_name'];?></td>
-                                            <td><?= $row['package_amount'];?></td>
                                             <td><?= $row['payment_details'];?></td>
                                             <td><?= $row['payment_type'];?></td>
-                                            <td><?= $row['package_amount']*$row['quantity'];?></td>
                                             <td><?= $row['purchase_date'];?></td>
                                             <td>
-                                                <a href="javascript:void(0);" class="deletePackage" ng-click="userPackageRequestAction(<?php echo $row['user_package_id']; ?>,<?php echo $row['userid']; ?>,'accepted')">Accept</a>
+                                                <a href="javascript:void(0);" class="deletePackage" ng-click="open_user_package_request_modal(<?php echo $row['user_package_id']; ?>,<?php echo $row['userid']; ?>,'accepted')">Accept</a>
                                                 <a href="javascript:void(0);" class="deletePackage" ng-click="deleteUserPackageRequest(<?php echo $row['user_package_id']; ?>)">Delete</a>
                                             </td>
                                         </tr>
@@ -66,6 +60,41 @@
                             </table>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Large Size -->
+    <div class="modal fade" id="user_package_request_accept" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="largeModalLabel">Accept Request</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <div class="form-line">
+                                <label>Amount : </label>
+                                <input type="text" class="form-control" ng-model="amount" ng-init="amount=0"/>
+                                <input type="hidden" class="form-control" ng-model="user_package_id"/>
+                                <input type="hidden" class="form-control" ng-model="userid"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <div class="form-line">
+                                <label>Months : </label>
+                                <input type="text" class="form-control" ng-model="months" ng-init="months=0"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary waves-effect" ng-click="request_accept()">Submit</button>
+                    <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
                 </div>
             </div>
         </div>

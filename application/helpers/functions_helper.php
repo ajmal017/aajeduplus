@@ -292,43 +292,11 @@ function getDirectUsers($userids=array())
        return $result; 
 }
 
-function get_return_of_interest($userids=array())
-{
-       global $CI;
-       $CI->load->model('Common_model');
-       $result = $CI->Common_model->get_return_of_interest($userids);
-       return $result; 
-}
-
-function get_loyality_income($userids=array())
-{
-       global $CI;
-       $CI->load->model('Common_model');
-       $result = $CI->Common_model->get_loyality_income($userids);
-       return $result; 
-}
-
 function get_referral_income($userids=array())
 {
        global $CI;
        $CI->load->model('Common_model');
        $result = $CI->Common_model->get_referral_income($userids);
-       return $result; 
-}
-
-function roi_details($userid=0)
-{
-       global $CI;
-       $CI->load->model('Common_model');
-       $result = $CI->Common_model->roi_details($userid);
-       return $result; 
-}
-
-function loyality_income_details($userid=0)
-{
-       global $CI;
-       $CI->load->model('Common_model');
-       $result = $CI->Common_model->loyality_income_details($userid);
        return $result; 
 }
 
@@ -348,6 +316,36 @@ function payment_details_view($userid=0,$tablename)
        return $result; 
 }
 
+function getParentDirectUsers($userids=array())
+{
+   	global $CI;
+   	$CI->load->model('Common_model');
+   	$result = $CI->Common_model->getParentDirectUsers($userids);
+   	return $result; 
+}
 
+function getTreeParentDirectUsers($userid=0)
+{
+	global $CI;
+	$id= $userid;
+	$tree = array();
+	for($i = 1;$i <= 7 ;$i++)
+	{
+		if($id > 0)
+		{
+			$result = getParentDirectUsers($id);
+			$id = 0;
+			foreach ($result as $row) {
+				if($row['sponsorid'] > 0)
+				{
+					$data = getUserInfo($row['sponsorid']);
+					$tree[$i] = array('userid'=>$row['sponsorid'],'status'=>$data['status']);	
+					$id=$row['sponsorid'];
+				}
+			}
+		}
+	}	
+	return $tree;
+}
 //$CI->output->enable_profiler(TRUE);
 ?>

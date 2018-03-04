@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Online Trading Institute</title>
+    <title>Welcome To | AajEduPlus</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -79,7 +79,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="../../index.html">ONLINE TRADING INSTITUTE</a>
+                <a class="navbar-brand" href="../../index.html">AajEduPlus</a>
             </div>
         </div>
     </nav>
@@ -153,6 +153,7 @@
                             <span>Bonus</span>
                         </a>
                     </li>-->
+                    <?php /* ?>
                     <li <?php if(isset($controller_name) && $controller_name == 'payment_details'){ echo 'class="active"'; } ?>>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">stars</i>
@@ -169,18 +170,13 @@
                                     <span>Return of interest</span>
                                 </a>
                             </li>
-                            <li <?php if(isset($controller_name) && $controller_name == 'payment_details' && isset($function_name) && $function_name == 'loyality_income'){ echo 'class="active"'; } ?>>
-                                <a href="<?php echo site_url(); ?>payment_details/loyality_income">
-                                    <span>Loyality Income</span>
-                                </a>
-                            </li>
                             <li <?php if(isset($controller_name) && $controller_name == 'payment_details' && isset($function_name) && $function_name == 'referral_income'){ echo 'class="active"'; } ?>>
                                 <a href="<?php echo site_url(); ?>payment_details/referral_income">
                                     <span>Referral Income</span>
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li><?php */ ?>
                     <?php if($role_id == 1){ ?>
                     <li <?php if(isset($controller_name) && in_array($controller_name,array('admin_packages','admin_users','admin_notifications','admin_news','admin_user_packages','admin_user_payment_details','admin_payout'))){ echo 'class="active"'; } ?>>
                         <a href="javascript:void(0);" class="menu-toggle">
@@ -232,6 +228,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            <?php /* ?>
                             <li>
                                 <a href="javascript:void(0);" class="menu-toggle">
                                     <span>Payment Details</span>
@@ -253,17 +250,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo site_url(); ?>admin_user_payment_details/loyality_income">
-                                            <span>Loyality income payouts</span>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="<?php echo site_url(); ?>admin_user_payment_details/referral_income">
                                             <span>Referral income payouts</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
+                            <?php */ ?>
                         </ul>
                     </li>
                     <?php } ?>

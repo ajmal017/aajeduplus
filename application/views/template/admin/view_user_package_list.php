@@ -23,10 +23,8 @@
                                     <tr>
                                         <th>User Name</th>
                                         <th>Package Name</th>
-                                        <th>Package Amount</th>
                                         <th>Payment Details</th>
                                         <th>Payment Type</th>
-                                        <th>Total Amount</th>
                                         <th>Purchase Date</th>
                                         <th>Acceptance Date</th>
                                     </tr>
@@ -35,10 +33,8 @@
                                     <tr>
                                         <th>User Name</th>
                                         <th>Package Name</th>
-                                        <th>Package Amount</th>
                                         <th>Payment Details</th>
                                         <th>Payment Type</th>
-                                        <th>Total Amount</th>
                                         <th>Purchase Date</th>
                                         <th>Acceptance Date</th>
                                     </tr>
@@ -51,10 +47,8 @@
                                         <tr id="user-package-id-<?php echo $row['user_package_id']; ?>">
                                             <td><?= $row['username'];?></td>
                                             <td><?= $row['package_name'];?></td>
-                                            <td><?= $row['package_amount'];?></td>
                                             <td><?= $row['payment_details'];?></td>
                                             <td><?= $row['payment_type'];?></td>
-                                            <td><?= $row['package_amount']*$row['quantity'];?></td>
                                             <td><?= $row['purchase_date'];?></td>
                                             <td><?= $row['acceptance_date']; ?></td>
                                         </tr>

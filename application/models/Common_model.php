@@ -648,4 +648,20 @@ class Common_model extends CI_Model
     	$this->db->trans_complete();
 		return $data;
     }
+
+    function getParentDirectUsers($userids=array(''))
+    {
+    	$this->db->trans_start();
+    	$this->db->select('*');
+    	$this->db->where_in('users.userid',$userids);
+		$query = $this->db->get('users');
+		
+		$data = array();
+		foreach($query->result() as $row)
+		{
+			$data[] = (array)$row;		
+		}
+    	$this->db->trans_complete();
+		return $data;
+    }
 }
