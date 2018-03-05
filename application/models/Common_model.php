@@ -40,7 +40,6 @@ class Common_model extends CI_Model
 			$data = array(
 							'package_id'=>$row->package_id,
 							'package_name'=>$row->package_name,
-							'package_amount'=>$row->package_amount,
 							'package_image'=>$row->package_image,
 							'package_desc'=>htmlspecialchars_decode($row->package_desc),
 							'package_status'=>$row->package_status,
@@ -112,8 +111,8 @@ class Common_model extends CI_Model
 							'fullname'=>$row->firstname.' '.$row->middlename.' '.$row->lastname,
 							'profile_image'=>$row->profile_image,
 							'package_name'=>$row->package_name,
-							'package_amount'=>$row->package_amount,
-							'quantity'=>$row->quantity,
+							'amount'=>$row->amount,
+							'months'=>$row->months,
 							'package_image'=>$row->package_image,
 							'package_desc'=>$row->package_desc,
 							'package_status'=>$row->package_status,

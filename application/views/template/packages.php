@@ -28,32 +28,32 @@
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Package Image</th>
+                                        <th>Amount</th>
+                                        <th>Months</th>
                                         <th>Purchase Date</th>
                                         <th>Status</th>
-                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Package Image</th>
+                                        <th>Amount</th>
+                                        <th>Months</th>
                                         <th>Purchase Date</th>
                                         <th>Status</th>
-                                        <th>Action</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
                                     <?php $userPackagesList = getUserPackages($session_data['logged_in']['userid']);
-                                    foreach($userPackagesList as $upl){ ?>
+                                    foreach($userPackagesList as $row){ ?>
                                     <tr>
-                                      <td><?= $upl['package_name']; ?></td>
-                                      <td><img class="img-responsive thumbnail" ng-src="<?= imagePath($upl['package_image'],'packages',100,100); ?>" /></td>
-                                      <td><?= $upl['purchase_date']; ?></td>
-                                      <td><?= $upl['user_package_status']; ?></td>
-                                      <td>
-                                          <a class="btn btn-primary" href="<?= site_url(); ?>/packages/content?package_id=<?= $upl['package_id']; ?>">View </a>
-                                      </td>
-                                        
+                                      <td><?= $row['package_name']; ?></td>
+                                      <td><img class="img-responsive thumbnail" ng-src="<?= imagePath($row['package_image'],'packages',100,100); ?>" /></td>
+                                      <td><?= $row['amount']; ?></td>
+                                      <td><?= $row['months']; ?></td>
+                                      <td><?= $row['purchase_date']; ?></td>
+                                      <td><?= $row['user_package_status']; ?></td>  
                                     </tr>
                                     <?php } ?>
                                   </tbody>

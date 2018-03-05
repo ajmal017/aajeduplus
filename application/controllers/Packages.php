@@ -68,20 +68,19 @@ class Packages extends CI_Controller {
 			$package_id = $this->input->post('package_id');
 			$payment_details = $this->input->post('payment_details');
 			$payment_type = $this->input->post('payment_type');
-			$quantity = 1;
-
+			
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('package_id', 'Package', 'required');
 			$this->form_validation->set_rules('payment_details', 'Payment Details', 'required');
 			$this->form_validation->set_rules('payment_type', 'Payment Type', 'required');
-			//$this->form_validation->set_rules('quantity', 'Quantity', 'required');
+			
 			$this->form_validation->run();
 			$error_array = $this->form_validation->error_array();
 
 			if(count($error_array) == 0 )
 	        {
 	        	$this->load->model('Packages_model');
-				$this->Packages_model->add_user_package($userid,$package_id,$quantity,$payment_details,$payment_type);
+				$this->Packages_model->add_user_package($userid,$package_id,$payment_details,$payment_type);
 	        	$status = 'success';
 			    $message = 'added successfully';
 			    $status_code = 200;

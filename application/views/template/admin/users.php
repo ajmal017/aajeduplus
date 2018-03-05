@@ -49,7 +49,7 @@
                                     foreach ($users_list as $row ) {
                                     $total_amount_invested = 0;
                                     foreach ($row['package_list'] as $row1) {
-                                        $total_amount_invested = $total_amount_invested + $row1['package_amount']*$row1['quantity'];
+                                        $total_amount_invested = $total_amount_invested + $row1['amount'];
                                      } 
                                         ?>
                                         <tr id="user-id-<?php echo $row['userid']; ?>">
