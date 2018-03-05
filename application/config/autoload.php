@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','functions','binary_tree','binary_payout');
+$autoload['helper'] = array('url','functions','common','binary_tree','binary_payout');
 
 /*
 | -------------------------------------------------------------------
