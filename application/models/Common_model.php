@@ -407,4 +407,56 @@ class Common_model extends CI_Model
     	$this->db->trans_complete();
 		return $data;
     }
+
+    function getReferralIncome($userid=0)
+    {
+    	$this->db->trans_start();
+    	$this->db->select('*,referral_income.status as referral_income_status');
+    	$this->db->where('referral_income.userid',$userid);
+
+    	$this->db->join('users', 'referral_income.from_user = users.userid','left');
+		$query = $this->db->get('referral_income');
+		
+		$data = array();
+		foreach($query->result() as $row)
+		{
+			$data[] = array(
+					"referral_income_id"=>$row->referral_income_id,
+					"from_user"=>$row->from_user,
+					"from_username"=>$row->username,
+					"amount"=>$row->amount,
+					"description"=>$row->description,
+					"referral_income_status"=>$row->referral_income_status,
+					"created_date"=>$row->created_date
+				);		
+		}
+    	$this->db->trans_complete();
+		return $data;
+    }
+
+    function getReturnOnInvestment($userid=0)
+    {
+    	$this->db->trans_start();
+    	$this->db->select('*,return_on_investment.status as roi_status');
+    	$this->db->where('return_on_investment.userid',$userid);
+
+    	$this->db->join('users', 'return_on_investment.userid = users.userid','left');
+		$query = $this->db->get('return_on_investment');
+		
+		$data = array();
+		foreach($query->result() as $row)
+		{
+			$data[] = array(
+					"roi_id"=>$row->roi_id,
+					"userid"=>$row->userid,
+					"username"=>$row->username,
+					"amount"=>$row->amount,
+					"description"=>$row->description,
+					"status"=>$row->roi_status,
+					"created_date"=>$row->created_date
+				);		
+		}
+    	$this->db->trans_complete();
+		return $data;
+    }
 }

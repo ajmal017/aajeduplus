@@ -147,12 +147,18 @@
                             <span>My Team</span>
                         </a>
                     </li>
-                    <!--<li <?php if(isset($controller_name) && $controller_name == 'bonus'){ echo 'class="active"'; } ?>>
-                        <a href="<?php echo site_url(); ?>bonus">
+                    <li <?php if(isset($controller_name) && $controller_name == 'income' && $function_name == 'referral_income'){ echo 'class="active"'; } ?>>
+                        <a href="<?php echo site_url(); ?>income/referral_income">
                             <i class="material-icons">stars</i>
-                            <span>Bonus</span>
+                            <span>Referral Income</span>
                         </a>
-                    </li>-->
+                    </li>
+                    <li <?php if(isset($controller_name) && $controller_name == 'income' && $function_name == 'return_on_investment'){ echo 'class="active"'; } ?>>
+                        <a href="<?php echo site_url(); ?>income/return_on_investment">
+                            <i class="material-icons">stars</i>
+                            <span>Return On Investment</span>
+                        </a>
+                    </li>
                     <?php /* ?>
                     <li <?php if(isset($controller_name) && $controller_name == 'payment_details'){ echo 'class="active"'; } ?>>
                         <a href="javascript:void(0);" class="menu-toggle">

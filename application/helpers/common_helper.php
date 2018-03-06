@@ -119,5 +119,21 @@ function getTreeParentDirectUsers($userid=0)
 	}	
 	return $tree;
 }
+
+function getReferralIncome($userid=0)
+{
+	global $CI;
+	$CI->load->model('Common_model');
+   	$result = $CI->Common_model->getReferralIncome($userid);
+   	return $result; 
+}
+
+function getReturnOnInvestment($userid=0)
+{
+	global $CI;
+	$CI->load->model('Common_model');
+   	$result = $CI->Common_model->getReturnOnInvestment($userid);
+   	return $result; 
+}
 //$CI->output->enable_profiler(TRUE);
 ?>
