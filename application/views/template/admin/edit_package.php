@@ -32,16 +32,6 @@ $package_data=getPackages($package_id);
                                 </div>
                             </div>
                             <div class="row clearfix">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <label>Package Amount</label>
-                                            <input type="text" class="form-control" name="package_amount" id="package_amount" value="<?php echo $package_data['package_amount']; ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <div class="form-line">
