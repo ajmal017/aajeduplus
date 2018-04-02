@@ -36,13 +36,11 @@ class Admin_packages extends CI_Controller {
 			$message = '';
 			$this->load->library('form_validation');
 			$package_name = $this->input->post('package_name');
-			$package_amount = $this->input->post('package_amount');
 			$package_desc = $this->input->post('package_desc');
 			$filesCount=isset($_FILES['files']['name'])? count($_FILES['files']['name']):0;
 			$downloadable_documents_count=isset($_FILES['downloadable_documents']['name'])? count($_FILES['downloadable_documents']['name']):0;
 
 			$this->form_validation->set_rules('package_name', 'Package Name', 'required');
-			$this->form_validation->set_rules('package_amount', 'Package Amount', 'required|numeric');
 			$this->form_validation->set_rules('package_desc', 'Package Description', 'required');
 			
 			
@@ -78,7 +76,7 @@ class Admin_packages extends CI_Controller {
 
 	        if(count($error_array) == 0 )
 	        {
-	        	$last_inserted_id = $this->Adminpackages_model->addPackage($package_name,$package_amount,$package_desc);	
+	        	$last_inserted_id = $this->Adminpackages_model->addPackage($package_name,$package_desc);	
 
 	        	$this->load->library('upload');
 			    $config['upload_path'] = FCPATH . 'uploads/packages/';
@@ -172,7 +170,6 @@ class Admin_packages extends CI_Controller {
 			$this->load->library('form_validation');
 			$package_id = $this->input->post('package_id');
 			$package_name = $this->input->post('package_name');
-			$package_amount = $this->input->post('package_amount');
 			$package_desc = $this->input->post('package_desc');
 			
 			$package_image = $this->input->post('package_image');
@@ -181,7 +178,6 @@ class Admin_packages extends CI_Controller {
 			$downloadable_documents_already_count = $this->input->post('downloadable_documents_already_count');
 
 			$this->form_validation->set_rules('package_name', 'Package Name', 'required');
-			$this->form_validation->set_rules('package_amount', 'Package Amount', 'required|numeric');
 			$this->form_validation->set_rules('package_desc', 'Package Description', 'required');
 			
 			$this->form_validation->run();
@@ -216,7 +212,7 @@ class Admin_packages extends CI_Controller {
 
 	        if(count($error_array) == 0 )
 	        {
-	        	$this->Adminpackages_model->editPackage($package_id,$package_name,$package_amount,$package_desc);	
+	        	$this->Adminpackages_model->editPackage($package_id,$package_name,$package_desc);	
 	        	$this->load->library('upload');
 		        if($filesCount > 0)
 		        {	

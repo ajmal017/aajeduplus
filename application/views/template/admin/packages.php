@@ -28,16 +28,6 @@
                                 </div>
                             </div>
                             <div class="row clearfix">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <label>Package Amount</label>
-                                            <input type="text" name="package_amount" id="package_amount" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <div class="form-line">
@@ -97,7 +87,6 @@
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Type</th>
-                                        <th>Amount</th>
                                         <th>Controls</th>
                                     </tr>
                                 </thead>
@@ -105,7 +94,6 @@
                                     <tr>
                                         <th>Package Name</th>
                                         <th>Type</th>
-                                        <th>Amount</th>
                                         <th>Controls</th>
                                     </tr>
                                 </tfoot>
@@ -116,7 +104,6 @@
                                         ?>
                                         <tr id="package-id-<?php echo $row['package_id']; ?>">
                                             <td><?= $row['package_name'];?></td>
-                                            <td><?= $row['package_amount'];?></td>
                                             <td>
                                                 <button type="button" class="btn btn-primary waves-effect" onclick="window.open('<?= site_url(); ?>admin_packages/edit/<?php echo $row['package_id']; ?>','_blank')">Edit</button>
                                                 <button type="button" class="btn btn-primary waves-effect deletePackage" ng-click="deletePackage(<?php echo $row['package_id']; ?>)">Delete</button>
