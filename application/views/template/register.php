@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Register | AajfxCOIN</title>
+    <title>Register | AajEduPlus</title>
     <!-- Favicon-->
     <link rel="icon" href="<?= base_url(); ?>assets/template/images/favicon.ico" type="image/x-icon">
     <!-- Bootstrap Core Css -->
@@ -15,7 +15,7 @@
 </script>
 <body class="login" ng-app="MyApp" ng-controller="MyController" style="background-color:#76889e;">
     <div class="logo">
-        <h2 style="color: #eee;">AAJFX<span style="color:#c51048;">COIN</span></h2>
+        <h2 style="color: #eee;">Aaj<span style="color:#c51048;">Edu</span>Plus</h2>
     </div>
     <div class="content">
         <div class="login-form" id="registration_step1">

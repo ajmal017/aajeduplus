@@ -68,7 +68,7 @@
         <div class="auto-container">
             <!--Sec Title-->
             <div class="sec-title">
-                <h2>Welcome to <span class="theme_color">AajFxCOIN</span></h2>
+                <h2>Welcome to <span class="theme_color">AajEduPlus</span></h2>
             </div>
             <div class="row clearfix">
                 <!--Content Column-->

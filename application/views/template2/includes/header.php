@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>AajFxCOIN</title>
+<title>AajEduPlus</title>
 <!-- Stylesheets -->
 <link href="<?= base_url(); ?>assets/template2/css/bootstrap.css" rel="stylesheet">
 <link href="<?= base_url(); ?>assets/template2/css/revolution-slider.css" rel="stylesheet">
@@ -53,7 +53,7 @@
                	
                 	<ul class="links-nav">
                         <li><span class="icon flaticon-telephone"></span> +91 9970236208</li>
-                        <li><span class="icon flaticon-close-envelope"></span> info@aajfxcoin.com</li>
+                        <li><span class="icon flaticon-close-envelope"></span> info@aajeduplus.com</li>
                     </ul>
                     
                 </div>

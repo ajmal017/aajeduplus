@@ -12,7 +12,7 @@
         <div class="auto-container">
             <div class="row">
                 <center>
-                    <iframe src="<?php echo base_url(); ?>aajfxcoin/assets/template2/aajfxcoin/CERTIFICATE_OF_INCORPORATION.PDF#toolbar=0&navpanes=0&statusbar=0&view=Fit;readonly=true; disableprint=true;" style="width:800px;height:1020px;border: none;align:center;" ></iframe>                    
+                    <iframe src="<?php echo base_url(); ?>assets/template2/aajfxcoin/CERTIFICATE_OF_INCORPORATION.PDF#toolbar=0&navpanes=0&statusbar=0&view=Fit;readonly=true; disableprint=true;" style="width:800px;height:1020px;border: none;align:center;" ></iframe>                    
                 </center>
             </div>
         </div>

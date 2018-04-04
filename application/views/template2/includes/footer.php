@@ -1,7 +1,7 @@
     <!--Main Footer-->
     <footer class="main-footer">
         <div class="footer-bottom">
-            <div class="copyright">&copy; 2017 AajFxCOIN All Rights Reserved.</div>
+            <div class="copyright">&copy; 2017 AajEduPlus All Rights Reserved.</div>
         </div>
     </footer>
     <!--End Main Footer-->

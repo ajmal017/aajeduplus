@@ -58,7 +58,7 @@
                         <div class="contact-info">
                             <ul>
                                 <li style="line-height: 25px;"><span class="icon flaticon-placeholder"></span>107,AAJ EduPlus Consulatancy Pvt. Ltd.,Vardhman Shopping Center,above Tungareshwar Sweets,Opp. Vasai Railway Stn, Vasai (W) </li>
-                                <li><span class="icon flaticon-close-envelope"></span>info@aajfxcoin.com</li>
+                                <li><span class="icon flaticon-close-envelope"></span>info@aajeduplus.com</li>
                                 <li><span class="icon flaticon-telephone"></span>+91 9970236208</li>
                             </ul>
                         </div>
