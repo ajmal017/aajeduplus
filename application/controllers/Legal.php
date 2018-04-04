@@ -23,6 +23,6 @@ class Legal extends CI_Controller {
 		$session_data = $this->session->userdata;
 		$data = array();
 		$data['session_data'] = $session_data;
-		$this->load->view('frontend/legal',$data);
+		$this->load->view('template2/legal',$data);
 	}
 }

@@ -23,16 +23,16 @@ class Contact_us extends CI_Controller {
 		$session_data = $this->session->userdata;
 		$data = array();
 		$data['session_data'] = $session_data;
-		$this->load->view('frontend/contact_us',$data);
+		$this->load->view('template2/contact_us',$data);
 	}
 
 	public function save_contact()
 	{
+		$status = '';
+		$message = array("Bad Request");
+		$status_code = 501;
 		if($this->input->post())
 		{
-			$status = '';
-			$message = '';
-			
 			$name = $this->input->post('name');
 			$email = $this->input->post('email');
 			$mobile = $this->input->post('mobile');
@@ -62,7 +62,7 @@ class Contact_us extends CI_Controller {
 				$template_data['mobile'] = $mobile;
 				$template_data['enquiry'] = $enquiry;
 				$email_data['subject'] = 'New Enquiry';
-				$email_data['html'] = $this->load->view('frontend/email_templates/contact_us',$template_data,true);;
+				$email_data['html'] = $this->load->view('template/email_templates/contact_us',$template_data,true);;
 				$email_data['to'] = 'info@onlinetradinginstitute.in';
 				send_email($email_data);
 	        }else
@@ -71,8 +71,8 @@ class Contact_us extends CI_Controller {
 			    $message = $error_array;
 			    $status_code = 501;
 			}
-			$response = array('status'=>$status,'message'=>$message);
-			echo responseObject($response,$status_code);			
 		}
+		$response = array('status'=>$status,'message'=>$message);
+		echo responseObject($response,$status_code);			
 	}
 }

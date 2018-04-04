@@ -28,13 +28,13 @@ class Home extends CI_Controller {
 		$session_data = $this->session->userdata;
 		$data = array();
 		$data['session_data'] = $session_data;
-		$this->load->view('frontend/home',$data);
+		$this->load->view('template2/home',$data);
 	}
 
 	public function view_package($package_id=0)
 	{
 		$data = array('package_id'=>$package_id);
-		$this->load->view('frontend/view_package',$data);
+		$this->load->view('template2/view_package',$data);
 	}
 
 	public function zerodha_lead()
