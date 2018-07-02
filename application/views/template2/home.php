@@ -141,6 +141,29 @@
                 <div class="row clearfix">
                     <div class="service-block-four col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
+                            <img src="<?= imagePath('assets/template2/aajfxcoin/retirement_plan.jpg','',200,180); ?>" style="width:200px;height:180px;">
+                            <h3><a href="services-single.html">Retirement Package</a></h3>
+                            <div class="text">Retirement planning, in a financial context, refers to the allocation of savings or revenue for retirement. The goal of retirement planning is to achieve financial independence.</div>
+                        </div>
+                    </div>
+                    <div class="service-block-four col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <img src="<?= imagePath('assets/template2/aajfxcoin/investment_plan.jpg','',200,180); ?>" style="width:200px;height:180px;">
+                            <h3><a href="services-single.html">Investment Package</a></h3>
+                            <div class="text">Typically, these goals could include buying a house, a car, child's education, marriage, building an emergency fund, retirement planning and so on. Making smarter investment plans helps achieve the above listed goals more effectively and timely.</div>
+                        </div>
+                    </div>
+                    <div class="service-block-four col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <img src="<?= imagePath('assets/template2/aajfxcoin/compounding.jpg','',200,180); ?>" style="width:200px;height:180px;">
+                            <h3><a href="services-single.html">Trader Package</a></h3>
+                            <div class="text">Trader package is the professional asset management of various securities and other assets in order to meet specified investment goals for the benefit of trader.</div>
+                            <a href="<?= site_url(); ?>services/trader" class="theme-btn btn-style-three">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="service-block-four col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
                             <img src="<?= imagePath('assets/template2/aajfxcoin/compounding.jpg','',200,180); ?>" style="width:200px;height:180px;">
                             <h3><a href="services-single.html">Trader Package</a></h3>
                             <div class="text">Trader package is the professional asset management of various securities and other assets in order to meet specified investment goals for the benefit of trader.</div>
